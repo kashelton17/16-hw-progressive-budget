@@ -1,11 +1,10 @@
 if ('serviceWorker' in navigator) {
-  console.log(navigator)
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register("/service-worker.js")
-    .then((reg) => {
-      console.log("we have registered our service worker", reg)
-    })
-  })
+    navigator.serviceWorker.register('./service-worker.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+  });
 }
 
 let transactions = [];
